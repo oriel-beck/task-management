@@ -12,6 +12,7 @@ import {
 } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 import { type Task, TaskStatus } from '../../../types';
 
@@ -25,7 +26,8 @@ import { type Task, TaskStatus } from '../../../types';
     MatDatepickerModule,
     MatSelectModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [
     provideNativeDateAdapter(),
