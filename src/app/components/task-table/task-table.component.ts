@@ -42,7 +42,7 @@ export class TaskTableComponent implements AfterViewInit {
   paginator = viewChild.required(MatPaginator);
 
   ngAfterViewInit(): void {
-    this.dataSource().filterPredicate = (data, filter) => data.title.toLowerCase().startsWith(filter.toLowerCase());
+    this.dataSource().filterPredicate = (data, filter) => data.title.toLowerCase().startsWith(filter.toLowerCase()) || data.description.toLowerCase().startsWith(filter.toLowerCase());
     this.dataSource().sortData = (data, sort) => sortExtendedTasks(data, sort);
     this.dataSource().sort = this.sort();
     this.dataSource().paginator = this.paginator();
