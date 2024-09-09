@@ -4,6 +4,9 @@
   div {
     display: flex;
     margin-inline: 15rem;
+    @media (max-width: 1200px) {
+      margin-inline: 5rem;
+    }
     align-items: center;
     gap: 2rem;
     button[mat-raised-button] {

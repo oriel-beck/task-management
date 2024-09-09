@@ -9,4 +9,10 @@
   app-task-table {
     margin-inline: 15rem;
   }
+
+  @media (max-width: 1200px) {
+    app-task-table {
+      margin-inline: 0;
+    }
+  }
 }
