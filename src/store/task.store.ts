@@ -36,7 +36,6 @@ export const TaskStore = signalStore(
         editTask: (idx: number, task: Task) => {
             const tasks = [...store.tasks()];
             tasks[idx] = task;
-            console.log(task, idx)
             patchState(store, { tasks });
             localStorage.setItem("tasks", JSON.stringify(tasks));
         },

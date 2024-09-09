@@ -71,7 +71,6 @@ export class CreateTaskComponent {
   }
 
   close(task?: typeof this.taskFormGroup.value) {
-    console.log(task)
     this.dialogRef.close(task ? { ...task, dueDate: task.dueDate?.getTime() } : null);
   }
 }
