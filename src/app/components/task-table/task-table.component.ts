@@ -22,7 +22,7 @@ import type { ExtendedTask } from '../../../store/task.store';
     MatSortModule,
     CommonModule,
     ToTaskStatusPipe
-],
+  ],
   templateUrl: './task-table.component.html',
   styleUrl: './task-table.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -46,5 +46,6 @@ export class TaskTableComponent implements AfterViewInit {
     this.dataSource().sortData = (data, sort) => sortExtendedTasks(data, sort);
     this.dataSource().sort = this.sort();
     this.dataSource().paginator = this.paginator();
+    this.sort().sort({ id: 'status', start: 'asc', disableClear: false });
   }
 }
