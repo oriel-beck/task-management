@@ -53,7 +53,7 @@ export const TaskStore = signalStore(
         taskList: computed(() => {
             const tasks = store.tasks().map((task, idx) => ({ ...task, idx })) as ExtendedTask[];
             if (store.searchTerm()) return tasks.filter((t) => t.title.toLowerCase().startsWith(store.searchTerm().toLowerCase()));
-            return tasks;
+            return tasks.sort((a, b) => a.status - b.status);
         })
     }))
 );
