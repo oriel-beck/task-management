@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  margin-bottom: 1.5rem;
+  div {
+    display: flex;
+    margin-inline: 15rem;
+    align-items: center;
+    gap: 2rem;
+    button[mat-raised-button] {
+      border-radius: 4px;
+      background-color: azure;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<div>
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput placeholder="Search..." [formControl]="searchControl" />
+  </mat-form-field>
+  <button mat-raised-button (click)="openDialog.emit()">Create</button>
+</div>

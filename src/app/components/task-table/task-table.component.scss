@@ -1,0 +1,67 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  ::ng-deep tbody {
+    tr {
+      background-color: lightgray;
+    }
+    tr:nth-child(2n) {
+      background-color: white;
+    }
+  }
+
+  ::ng-deep thead {
+    tr {
+        background-color: lightcyan;
+    }
+  }
+
+  .mat-column-status {
+    width: 5rem;
+  }
+
+  .mat-column-title {
+    width: 20rem;
+  }
+
+  .mat-column-description {
+    width: 10rem;
+    max-width: 10rem;
+  }
+
+  .mat-column-dueDate {
+    width: 10rem;
+    max-width: 10rem;
+  }
+
+  .mat-column-actions {
+    width: 5rem;
+  }
+
+  .mat-column-description,
+  .mat-column-dueDate {
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  // align all table content to center
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // align all table headers to center
+  .cdk-header-cell,
+  ::ng-deep .mat-sort-header-container {
+    text-align: center;
+    justify-content: center;
+  }
+
+  // correct alignment due to hidden icon
+  ::ng-deep .mat-sort-header-content {
+    margin-left: 1rem;
+  }
+}

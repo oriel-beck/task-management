@@ -1,0 +1,12 @@
+:host {
+  .header {
+    margin-bottom: 4rem;
+    .mat-toolbar {
+      justify-content: center;
+    }
+  }
+  
+  app-task-table {
+    margin-inline: 15rem;
+  }
+}
